@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(241, 245, 241);
+}
+
+@layer base {
+    .pageMainDiv {
+      @apply w-full px-2 md:px-0 mx-auto text-lg pt-12 text-[#fdeed4];
+    }
+  
+    .subTitle {
+      @apply dark:text-[#00FF00] text-white text-2xl md:text-3xl pt-4 pb-1 font-mono font-semibold text-center;
+    }
+  
+    .webNavButton {
+      @apply font-mono hover:bg-[#ffffff4d] p-2 px-4 rounded-lg ease-in-out duration-500 flex items-center gap-2;
+    }
+  
+    .mobileNavButton {
+      @apply font-mono bg-white p-2 px-4 rounded-lg flex items-center gap-2;
+    }
+  
+    .iconStyle {
+      @apply text-[#fdeed4] hover:text-[#57375D] dark:hover:text-[#ff69b0] ease-in-out duration-500;
+    }
+  
+    .tool {
+      @apply flex flex-col gap-2;
+    }
+  
+    .toolTitle {
+      @apply text-lg font-semibold mb-2 text-white dark:text-[#00FF00];
+    }
+  
+    .toolItem {
+      @apply flex gap-2 items-center;
+    }
+
+    .normalButton {
+        @apply py-2 px-6 bg-slate-900 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-slate-100 dark:text-black;
+    }
+
+    .codeButton {
+        @apply p-2 bg-red-500 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-red-800;
+    }
+}
