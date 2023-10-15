@@ -9,7 +9,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
   return (
     <nav className={`${darkMode ? 'bg-gray-800' : 'bg-gradient-to-r from-[#ff69b0] to-[#ffb5a8]'} md:text-lg bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-[0.2] sticky top-0 z-20 rounded-b-xl border-b-2 border-white py-1  px-2 md:px-0 flex-col`}>
-      <div className="md:w-[80%] mx-auto flex justify-between items-center">
+      <div className="md:w-[90%] lg:w-[80%] mx-auto flex justify-between items-center">
         <h3 onClick={() => setPopUp(!popUp)} className=" font-bold tracking-wider font-mono">DevelopedByKSL</h3>
             
         <div className="flex gap-4">
@@ -37,7 +37,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
 
             <a
               href="#certificates"
-              className="webNavButton"
+              className=" hidden lg:flex webNavButton"
             >
               <FaCertificate /> CERTIFICATES
             </a>

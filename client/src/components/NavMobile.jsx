@@ -33,7 +33,7 @@ export default function NavMobile() {
             <div className="fixed inset-0 bg-black bg-opacity-40" />
 
             <div className="fixed inset-0 z-40 flex">
-                <Dialog.Panel className="relative mr-auto flex h-full w-80 flex-col overflow-y-auto bg-slate-800 py-4 pb-6 shadow-xl rounded-r-lg">
+                <Dialog.Panel className="relative mr-auto flex h-full w-64 flex-col overflow-y-auto bg-slate-800 py-4 pb-6 shadow-xl rounded-r-lg">
 
                 <div className="flex items-center justify-end px-4" onClick={closeModal}>
                     <RiCloseCircleFill className='text-2xl text-white' />
@@ -69,7 +69,7 @@ export default function NavMobile() {
                       className="bg-white p-2 px-4 rounded-lg flex items-center gap-2"
                       onClick={closeModal}
                     >
-                      <FaCertificate className='text-xl'/> CERTIFICATES
+                      <FaCertificate /> CERTIFICATES
                     </a>
 
                     <a
