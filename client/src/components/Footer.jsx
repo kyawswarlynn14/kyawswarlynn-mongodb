@@ -39,6 +39,10 @@ function Footer() {
             <span>|</span>
 
             <a href="#portfolio" className=" text-gray-100 hover:underline underline-offset-2">Portfolio</a>
+
+            <span>|</span>
+
+            <a href="#certificates" className=" text-gray-100 hover:underline underline-offset-2">Certificates</a>
           </div>
         </div>
       </div>

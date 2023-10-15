@@ -32,7 +32,7 @@ function ServiceCard({service}) {
     >
         <div className='w-full h-52 absolute top-0 rounded-t-xl overflow-hidden'>
             <img
-                src={service.image}
+                src={service.img_url}
                 alt={service.title}
                 className="w-full h-full object-cover hover:scale-110 duration-500"
             />
@@ -44,11 +44,11 @@ function ServiceCard({service}) {
             state[service.serviceName] ? "h-auto " : "h-32 overflow-hidden"
             } text-[#fdeed4] text-base px-2 text-justify`}
         >
-            {service.description}
+            {service.content}
         </p>
 
         <button
-            className=" my-2"
+            className="normalButton my-2"
             onClick={() => toggleReadMore(service.serviceName)}
         >
             {state[service.serviceName] ? (

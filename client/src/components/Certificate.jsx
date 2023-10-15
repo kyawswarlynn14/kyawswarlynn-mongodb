@@ -1,39 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getCertificates } from '../services';
 
 function Certificate() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        getCertificates().then((data) => {
+            setData(data);
+        })
+    }, [])
+
   return (
-    <div className="pageMainDiv">
-        <h3 className="subTitle">Certifications</h3>
+    <div id='certificates' className="pageMainDiv">
+        <h3 className="subTitle mb-8">Certifications</h3>
 
-        <div>
-            <p className="text-justify text-[#fdeed4] py-4">
-                I have earned the Front End Development Libraries Certificate from{" "}
-                <a
-                    className="text-[#00FF00] hover:underline"
-                    href="https://www.freecodecamp.org/certification/kyawswarlynn14/front-end-development-libraries"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    freeCodeCamp
-                </a>. You can verify my certification{" "}
-                <a
-                    className="text-[#00FF00] hover:underline"
-                    href="https://www.freecodecamp.org/certification/kyawswarlynn14/front-end-development-libraries"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    here
-                </a>. This certification demonstrates my dedication to mastering front-end development skills.
-            </p>
+        {data?.map(d => (
+            <div className='w-full md:flex gap-4 shadow-2xl dark:shadow-slate-700 p-4 rounded-lg'>
+                <div className='md:w-[40%] flex flex-col items-center gap-4'>
+                    <p className='font-mono font-semibold text-center text-lg md:text-xl underline underline-offset-4'>
+                        {d?.title}
+                    </p>
 
-            <div className="w-full md:w-[70%] lg:w-[50%] mx-auto">
-                <img
-                className=""
-                src='/images/fcc-frontend-certificate.png'
-                alt="certificate image"
-                />
+                    <p className="text-justify text-[#fdeed4]">
+                        {d?.content}
+                    </p>
+
+                    <a href={d?.demo_link} className='normalButton px-8'>
+                        Virefy Here
+                    </a>
+                </div>
+
+                <div className="md:flex-1 mt-2">
+                    <img
+                    className="w-full h-auto"
+                    src={d?.img_url}
+                    alt="certificate image"
+                    />
+                </div>
             </div>
-        </div>
+        ))}
+
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { Dialog } from '@headlessui/react'
 import { useState } from 'react'
 import { RiMenu3Line, RiCloseCircleFill } from "react-icons/ri";
 import {AiFillHome} from 'react-icons/ai'
-import {FaLaptopCode, FaBlog} from 'react-icons/fa'
+import {FaLaptopCode, FaBlog, FaCertificate} from 'react-icons/fa'
 import {BsPersonWorkspace} from 'react-icons/bs'
 import {CgMenuBoxed} from 'react-icons/cg'
 
@@ -62,6 +62,14 @@ export default function NavMobile() {
                     onClick={closeModal}
                     >
                     <BsPersonWorkspace /> PORTFOLIO
+                    </a>
+
+                    <a
+                      href="#certificates"
+                      className="bg-white p-2 px-4 rounded-lg flex items-center gap-2"
+                      onClick={closeModal}
+                    >
+                      <FaCertificate className='text-xl'/> CERTIFICATES
                     </a>
 
                     <a

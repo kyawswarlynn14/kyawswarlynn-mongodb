@@ -1,5 +1,9 @@
 
 export { default as Admin } from './Admin';
+export { default as AdminCertificates } from './AdminCertificates';
+export { default as AdminPortfolios } from './AdminPortfolios';
+export { default as AdminServices } from './AdminServices';
+export { default as AdminSocials } from './AdminSocials';
 export { default as Login } from './Login';
 
 export { default as CreateCertificate } from './CreateCertificate';

@@ -16,7 +16,7 @@ body{
     }
   
     .webNavButton {
-      @apply font-mono hover:bg-[#ffffff4d] p-2 px-4 rounded-lg ease-in-out duration-500 flex items-center gap-2;
+      @apply font-mono hover:bg-[#ffffff4d] p-2 px-4 rounded-lg ease-in-out duration-500 flex items-center gap-2 cursor-pointer;
     }
   
     .mobileNavButton {
@@ -40,10 +40,26 @@ body{
     }
 
     .normalButton {
-        @apply py-2 px-6 bg-slate-900 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-slate-100 dark:text-black;
+        @apply py-2 px-6 bg-slate-900 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-slate-100 dark:text-black flex items-center gap-1;
     }
 
     .codeButton {
-        @apply p-2 bg-red-500 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-red-800;
+        @apply p-2 bg-red-500 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 dark:bg-red-800 flex items-center gap-1;
+    }
+
+    .adminButton {
+      @apply p-2 bg-slate-800 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 flex items-center gap-2;
+    }
+
+    .actionButton {
+      @apply p-2 px-4 bg-pink-600 rounded-lg hover:opacity-80 text-white text-sm font-semibold transition-all duration-200 flex items-center gap-2;
+    }
+
+    .input{
+      @apply w-full px-4 py-2 border bg-gray-700 text-white placeholder-gray-400 border-gray-600 rounded-md focus:outline-none focus:ring focus:border-blue-300;
+    }
+
+    .adminCreatePage{
+      @apply min-h-screen bg-gradient-to-r from-[#ff69b0] to-[#ffb5a8] flex items-center justify-center pb-4;
     }
 }

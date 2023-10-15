@@ -1,13 +1,24 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Cookies from 'js-cookie';
-import { Admin, CreateCertificate, CreateItem, CreatePortfolio, CreateService, CreateSocial, Login, UpdateCertificate, UpdateItem, UpdatePortfolio, UpdateService, UpdateSocial } from './pages/admin';
+import { Admin, AdminCertificates, AdminPortfolios, AdminServices, AdminSocials, CreateCertificate, CreateItem, CreatePortfolio, CreateService, CreateSocial, Login, UpdateCertificate, UpdateItem, UpdatePortfolio, UpdateService, UpdateSocial } from './pages/admin';
+import AdminNav from './components/AdminNav';
 
 export default function App() {
   const token = Cookies.get('access_token');
+  const { pathname } = useLocation();
+  const adminPaths = [
+    '/admin',
+    '/certificates',
+    '/portfolios',
+    '/services',
+    '/socials'
+  ];
+  console.log(pathname);
 
   return (
-    <BrowserRouter>
+    <>
+      { token && adminPaths.includes(pathname) && <AdminNav /> }
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
@@ -16,6 +27,10 @@ export default function App() {
         token && 
         <>
           <Route path='/admin' element={<Admin />} />
+          <Route path='/certificates' element={<AdminCertificates />} />
+          <Route path='/portfolios' element={<AdminPortfolios />} />
+          <Route path='/services' element={<AdminServices />} />
+          <Route path='/socials' element={<AdminSocials />} />
 
           <Route path='/create-certificate' element={<CreateCertificate />} />
           <Route path='/update-certificate/:id' element={<UpdateCertificate />} />
@@ -34,6 +49,6 @@ export default function App() {
         </>
         }
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
