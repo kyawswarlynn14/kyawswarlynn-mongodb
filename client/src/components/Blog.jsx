@@ -22,7 +22,7 @@ function Blog() {
         <div className="h-full w-full flex flex-col justify-center items-center text-center gap-y-4 md:gap-y-8 absolute top-0 px-4 md:px-8">
             <h3 className="text-xl font-semibold tracking-wider">{data?.position}</h3>
 
-            <p className="text-lg md:text-xl text-justify py-2 leading-6 md:leading-8 text-white font-mono ">
+            <p className="text-sm text-start md:text-xl md:text-justify py-2 leading-6 md:leading-8 text-white font-mono ">
               {data?.description}
             </p>
 
