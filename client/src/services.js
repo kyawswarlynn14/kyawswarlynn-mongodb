@@ -2,7 +2,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 const token = Cookies.get('access_token');
-const BASE_URL="http://localhost:3000";
+const BASE_URL="https://kyawswarlynn.onrender.com";
+// const BASE_URL="http://localhost:3000";
 // Items
 export const getItems = async () => {
     const res = await axios.get(`${BASE_URL}/api/items/get`);
